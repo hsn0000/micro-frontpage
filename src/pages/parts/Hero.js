@@ -7,21 +7,24 @@ export default function Hero() {
     }
     return (
         <div className="flex justify-between items-center">
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2 mt-8 md:mt-0">
                 <h1 className="text-5xl text-white mb-5 font-semibold">
-                    <span className="text-teal-400">The New</span> Way to <br/> Archieve Good <span className="text-teal-400">Skills</span>
+                    <span className="text-teal-400">The New</span> Way to <br className="hidden md:block"/> Archieve Good <span className="text-teal-400">Skills</span>
                 </h1>
                 <p className="text-white text-light mb-8">
                     We provide tons of pathskill that you <br/> can choose and focus on
                 </p>
 
-                <form onSubmit={submit}>
-                    <input type="text" className="bg-white focus:outline-none border-0 px-6 py-3 w-1/2" 
+                <form onSubmit={submit} className="flex">
+                    <input type="text" className="bg-white focus:outline-none border-0 md:px-6 py-3 md:w-1/2 w-full px-4" 
                     onChange={(event) => setstate(event.target.value)} value={state} placeholder="Your Email Address"/>
-                    <button className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none shadow-inner text-white px-6 py-3"> Daftar Now </button>
+                    <button className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none shadow-inner text-white md:px-6 px-4 py-3 whitespace-no-wrap" 
+                    style={{whiteSpace:"nowrap"}}> 
+                        Daftar Now 
+                    </button>
                 </form>
             </div>
-            <div className="w-1/2 flex justify-end pt-24 pr-16">
+            <div className="hidden w-1/2 md:flex justify-end pt-24 pr-16">
                 <div className="relatife" style={{width:369, height:400}}>
                     <div className="absolute border-indigo-700 border-2 -mt-12 -mr-6 right-0" style={{ width: 324, height:374 }}></div>
                     <div className="absolute -mb-8 -ml-8 "> {/* w-full h-full  */}
@@ -31,7 +34,7 @@ export default function Hero() {
                         <p className="text-gray-900 mb-2">Metode belajar yang santai seperti nonton drakor di Netflix</p>
                         <span className="text-gray-600">Allysa, App Developer</span>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     )

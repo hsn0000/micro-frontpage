@@ -62,7 +62,7 @@ function Courses({data}) {
             <section className="pt-10 z-30 relative" style={{height:360}}>
                 <div className="absolute inset-0 z-0 w-full h-full bg-black opacity-75"></div>
                 <div className="meta-title absolute bottom-0 object-fill z-0 w-full flex justify-center items-center" style={{ marginBottom: "-25px" }}>
-                    <div className="">
+                    <div className="px-4">
                         <h3 className="text-6xl text-center text-teal-500 font-semi-bold">Library</h3>
                         <h4 className="text-lg text-center text-white">Jangan mau kalah dengan yg lainnya. <br/> Yuk ikuti perkembangan teknologi.</h4>
                         <div className="flex flex-col relative" ref={selectWrapper}>
@@ -108,12 +108,12 @@ function Courses({data}) {
                     </div>
                 </div>
 
-                <div className="container mx-auto z-10 relative">
+                <div className="container px-4 mx-auto z-10 relative">
                     <Header></Header>
                 </div>
             </section>
 
-            <section className="container mx-auto pt-24">
+            <section className="container px-4 mx-auto pt-24">
                 <ListCourses data={data}> </ListCourses>
             </section>
 

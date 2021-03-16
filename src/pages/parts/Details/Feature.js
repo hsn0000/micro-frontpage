@@ -1,10 +1,10 @@
 import React from 'react'
 
-import formatThousand from 'src/helpers/formatThousand'
+import formatThousand from '../../../helpers/formatThousand'
 
 export default function Feature({ data }) {
     return (
-        <div className="border border-gray-300 bg-white p-6 border-feature" style={{ width:290 }}>
+        <div className="border border-gray-300 bg-white p-6 border-feature w-full md:w-1/3" style={{ width:290 }}>
             <div className="flex">
                 <div className="w-auto">
                     {data?.icon ? data?.icon : ""}

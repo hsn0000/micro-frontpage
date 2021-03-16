@@ -4,7 +4,7 @@ import IconPlay from '../../../../public/images/icon-play.svg'
 
 export default function RenderItem({item}) {
     return (
-        <div className="w-1/4 px-4 py-2">
+        <div className="w-full md:w-1/4 px-4 py-2">
             <div className="item relative">
                 <figure className="item-image">
                     <IconPlay></IconPlay>

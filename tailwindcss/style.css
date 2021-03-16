@@ -120,7 +120,7 @@
     position: absolute;
 
     left: 50%; transform: translateX(-50%); width:515px;
-    height: 90%;
+    height: 85%;
     opacity: 0.8;
     clip-path: polygon(46% 0%, 82% 0%, 67% 100%, 0% 100%);
     background: transparent linear-gradient(130.09deg, #3d47bd 0%, #2e37a4 50.8%)
@@ -133,6 +133,19 @@
     @apply  absolute;
     content:""; height: 648px;
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%) 
+}
+
+@media (max-width: 640px) {
+    .header-cliping svg#accent-circle {
+        top: 339px;
+        bottom:50px;
+        transform: rotate(-14deg);
+        left: -27px;
+    }
+
+    .header-cliping .sunshine {
+        height: 79%;
+    }
 }
 
 .item figure.item-image {
@@ -255,3 +268,50 @@ svg#svg-star { position: absolute; width: 0; height: 0; left: -999999px; top: -9
     z-index: 1;
     @apply bg-yellow-200
 }
+
+.toggle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    z-index: 9999;
+}
+
+.toggle:focus {
+    outline: none;
+}
+
+.toggle:before, .toggle:after {
+    @apply right-0;
+    @apply absolute;
+    @apply bg-gray-200;
+    @apply transition-all;
+    @apply duration-200;
+    content: "";
+    height: 3px; 
+    transform-origin: center;
+}
+
+.toggle:before {
+    top: 26%;
+    width: 20px;
+}
+
+.toggle:after {
+    top: 58%;
+    width: 12px;
+}
+
+.toggle.active:before, .toggle.active:after{
+    width: 20px;
+    top: 50%;
+}
+
+.toggle.active:before {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.toggle.active:after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+ 

@@ -21,7 +21,9 @@ export default function RenderPreview({previews}) {
                                                 {
                                                     index2 === 0 && ( 
                                                     <Modal content={(toggleModal) => (
-                                                        <YouTube videoId={child?.video} id={child?.video} 
+                                                        <YouTube
+                                                            className="w-full"
+                                                            videoId={child?.video} id={child?.video} 
                                                             opts={{
                                                                 playerVars: {
                                                                     autoplay: 1,

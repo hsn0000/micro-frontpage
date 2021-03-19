@@ -132,7 +132,8 @@ function DetailslCourses({ data }) {
                     </CSSTransition>
                 </div>
                 <div className="w-3/4 mx-auto mt-8">
-                    <div className="w-full md:w-3/4">
+                    {/* md:w-3/4 */}
+                    <div className="w-full">
                         <section>
                             <h6 className="font-medium text-gray-900 text-2xl mb-4">About <span className="text-teal-500">Course</span></h6>
                             <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-3" dangerouslySetInnerHTML={{__html: data?.description ?? "No Description Found"}}>

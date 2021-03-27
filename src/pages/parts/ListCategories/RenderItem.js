@@ -9,10 +9,10 @@ export default function RenderItem({item}) {
                 {item?.imageName ? item?.imageName : ""}
                 <div className="card-meta mt-10">
                     <h4 className="text-lg transition-all duration-200 w-1/2">
-                        {item.name}
+                        {item?.name}
                     </h4>
                     <h5 className="text-sm transition-all duration-500 mt-2">
-                        {formatThousand(item.total)}
+                        {formatThousand(item?.total)}
                     </h5>
                     <Link href="#"><a className="link-wrapped"></a></Link>
                 </div>
